@@ -1,0 +1,23 @@
+<!-- error_report.html -->
+<html>
+    <head>
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Test Python Template</title>
+    </head>
+<body>
+<!-- The text msg you see below as t_title is why we call this a template -->
+<!-- t_title is filled in by Python as it calls up this HTML -->
+<h1>{{t_title}}</h1>
+<!-- div to contain form -->
+<div class='div_outer'>
+{%
+for t_pkg_name in array_softwares:
+%}
+  <div class='div_inner'>software: {{ t_pkg_name }}</div>
+{%
+endfor
+%}
+</div>
+<!-- Close the body of the HTML document -->
+</body>
+</html>
